@@ -1,17 +1,17 @@
 #variables and names
 
 # declaring variables.
-car=100
-space_in_car=4.0
-drivers=30
-passangers=90
+car = 100
+space_in_car = 4.0
+drivers = 30
+passangers = 90
 #find cars not driven by suntracting cars by drivers
-car_not_driven=car-drivers                        
-car_driven=drivers
+car_not_driven = car - drivers                        
+car_driven = drivers
 #find car capasity by multipling car driven and space in car
-car_capasity=car_driven* space_in_car
+car_capasity = car_driven * space_in_car
 #find avg passangers per car
-avg_passangers_per_car=passangers/car_driven
+avg_passangers_per_car = passangers / car_driven
 
 
 #printing values
