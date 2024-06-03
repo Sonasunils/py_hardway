@@ -1,41 +1,55 @@
 # Review of my first shell scripting program.
 ## ari.py
 
-My first shell scripting program is about to calculate Automated redability index of text files.
+My first shell scripting program calculates the Automated Readability Index (ARI) of text files.
+
+ # The basic idea to solve this problem:
+Read the file content.
 
 
-## The basic idea about to solve this problem :
+Find the file content.
 
 
-1.Read the file content.
+Declare a function (calculate_ari) that passes values as arguments.By using these values, calculate the ARI.
 
 
-2.Find the number of characters,words and sentance present in the file.
+Pass the ARI values to another function (determine_grade_level) to find the grade level.
 
-
-3.Declar a function(calculate_ari) pass these value as argument.By using these value calculate ARI.
-
-
-4.The ARI value passsed to an another function(determine_grade_level) for finding grade.
 
 ## How I find solution :
 
+## Read file content and find required values:
 
-Read file content and find required values.
+Refer to Google and ChatGPT and found that` content=$(cat "$file")` can store the content of the file.
+Found character, word, and sentence counts by:
 
-
-Refer google and chatgpt and find `**content=$(cat "$file")` can store content of file and i find character, words and sentance by `chars=$(echo -n "$content" | wc -m)`
+`chars=$(echo -n "$content" | wc -m)`
 `words=$(echo -n "$content" | wc -w)`
 `sentences=$(echo -n "$content" | grep -o '[.!?]' | wc -l)`
+I sometimes get stuck because the reading content and find values are different in shell scripting
 
-Function
+## Function:
 
-Refer google how to write function in shell scripting. And find the solution .In function call `calculate_ari $chars $words $sentences` Pass 3 values as argument. `local chars=$1 ` Assign value of the first argument to the local variable "chars".Like that all the argument values are assign to variables. And find ARI value by substituting values to Equation  .
-Declear another function `determine_grade_level()` for finding grade.Using if elif each test cases were checked.
+Refer to Google to learn how to write functions in shell scripting and found the solution.
 
-## Program accuracy
 
-Test cases checked by using different files containing different character count , sentence and words..
+In the function call, use calculate_ari $chars $words $sentences to pass the three values as arguments.
+
+
+Inside the function, assign the value of the first argument to the local variable chars using local chars=$1. Similarly, assign values to other variables.
+
+
+Find the ARI value by substituting values into the equation.
+
+
+Declare another function determine_grade_level() to find the grade. Use if, elif statements to check each test case.
+
+## Program accuracy:
+
+
+Test cases were checked using different files containing different character counts, sentences, and words.
+    
+
 
 
 
