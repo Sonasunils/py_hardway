@@ -11,11 +11,11 @@ def subtract(a, b):
 def multiply(a, b):
     print(f"MULTIPLYING {a} * {b}")
     return a * b
-#div two values
+#div two values 
 def divide(a, b):
     print(f"DIVIDING {a} / {b}")
     return a / b
-
+#print
 print("Let's do some math with just functions!")
 
 age = add(30, 5)
